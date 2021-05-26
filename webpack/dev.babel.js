@@ -44,7 +44,7 @@ const devConfig = configBuilder(
         colors: true,
       },
       hot: true,
-      contentBase: path.join(__dirname, "../", "dev-helpers"),
+      contentBase: path.join(__dirname, "../", "app"),
       host: "0.0.0.0",
     },
 

@@ -1,0 +1,9 @@
+swagger: "2.0"
+info:
+  description: "Swagger mock api for aniuta api"
+  version: "1.0.0"
+  title: "Swagger"
+host: "localhost:8000"
+paths:
+  /users:
+    $ref: "./paths/user/users.yml#/paths/~1users"

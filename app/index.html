@@ -38,12 +38,18 @@
   <script src="./swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
   <script>
     window.onload = function() {
+      var url = window.location.search.substring(1);
+
+      if (url.length == 0) {
+      url = "/components/index.yml";
+      }
       window["SwaggerUIBundle"] = window["swagger-ui-bundle"]
       window["SwaggerUIStandalonePreset"] = window["swagger-ui-standalone-preset"]
       // Build a system
       const ui = SwaggerUIBundle({
-        url: "https://petstore.swagger.io/v2/swagger.json",
+        url: url,
         dom_id: '#swagger-ui',
+        // configUrl: url,
         presets: [
           SwaggerUIBundle.presets.apis,
           SwaggerUIStandalonePreset
